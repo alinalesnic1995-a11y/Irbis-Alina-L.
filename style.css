@@ -1,0 +1,12 @@
+.card{
+    width: 450px;
+    height: 450px;
+    background-color: blueviolet;
+    border-radius: 15%;
+    box-sizing: border-box;
+
+}
+
+.image-container{
+    width: 50%;
+}
