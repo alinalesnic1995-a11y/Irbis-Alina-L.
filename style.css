@@ -10,3 +10,48 @@
 .image-container{
     width: 50%;
 }
+
+nav {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list{
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+.main_p_1{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 100px;
+    right: 100px;
+    bottom: 200px;
+    left: 100px;
+    background-color: rgb(165, 116, 210);
+    border-radius: 50%;
+
+}
+
+.about_2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: rgb(165, 116, 210);
+    border-radius: 50%;
+}
+
+.cont_3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: rgb(165, 116, 210);
+    border-radius: 50%;
+
+}
