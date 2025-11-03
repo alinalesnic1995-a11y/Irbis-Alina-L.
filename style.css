@@ -1,57 +1,194 @@
-.card{
-    width: 450px;
-    height: 450px;
-    background-color: blueviolet;
-    border-radius: 15%;
+/* === Базовые стили === */
+* {
     box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
 }
 
-.image-container{
-    width: 50%;
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(245, 245, 245);
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
 }
 
-nav {
-    height: 100%;
+/* === Верхняя панель === */
+.top_bar {
+    height: 10px;
+    background-color: rgb(0, 77, 102);
+}
 
+/* === Навигация === */
+.nav_links {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(0, 102, 128);
+}
+
+.nav_links p {
+    margin: 10px 0;
+}
+
+.nav_links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav_links a:hover {
+    color: rgb(255, 215, 0);
+}
+
+/* === Контейнер с карточками (главная) === */
+.container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
 }
 
-.list{
-    list-style: none;
-
-    display: flex;
-    gap: 25px;
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-.main_p_1{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    top: 100px;
-    right: 100px;
-    bottom: 200px;
-    left: 100px;
-    background-color: rgb(165, 116, 210);
-    border-radius: 50%;
-
+.card:hover {
+    transform: scale(1.03);
 }
 
-.about_2{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background-color: rgb(165, 116, 210);
-    border-radius: 50%;
+.card h3 {
+    color: rgb(0, 77, 102);
+    margin-bottom: 10px;
 }
 
-.cont_3{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background-color: rgb(165, 116, 210);
-    border-radius: 50%;
+.img_card {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
 
+.pret_produs {
+    font-size: 18px;
+    color: #e67e22;
+    margin-top: 10px;
+}
+
+.buy_button {
+    background-color: #006680;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy_button:hover {
+    background-color: #0099cc;
+}
+
+/* === Контакты / Карта === */
+.map_container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+/* === Форма входа === */
+.login_form {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 400px;
+}
+
+.login_form input[type="text"],
+.login_form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login_form button {
+    padding: 10px 20px;
+    background-color: #006680;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login_form button:hover {
+    background-color: #0099cc;
+}
+
+/* === About us (история и видео) === */
+.about_section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about_section h1 {
+    color: #004d66;
+    margin-bottom: 10px;
+}
+
+.video_section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.video_section video {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* === Footer (если нужно) === */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .login_form {
+        width: 90%;
+    }
 }
