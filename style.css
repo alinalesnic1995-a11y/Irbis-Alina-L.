@@ -1,194 +1,212 @@
-/* === Базовые стили === */
+/* ======================
+   GLOBAL RESET
+====================== */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(245, 245, 245);
-    color: rgb(51, 51, 51);
+    background: #f4f4f4;
+    color: #333;
     line-height: 1.6;
 }
 
 /* === Верхняя панель === */
-.top_bar {
-    height: 10px;
-    background-color: rgb(0, 77, 102);
+
+header {
+    background-color: #004d66;
+    padding: 15px 0;
 }
+
 
 /* === Навигация === */
-.nav_links {
-    text-align: center;
-    padding: 20px;
-    background-color: rgb(0, 102, 128);
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
-.nav_links p {
-    margin: 10px 0;
-}
-
-.nav_links a {
-    color: rgb(255, 255, 255);
+.navbar a {
+    color: #fff;
+    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s;
+    transition: .3s;
 }
 
-.nav_links a:hover {
-    color: rgb(255, 215, 0);
+.navbar a:hover {
+    color: #ffd700;
 }
 
-/* === Контейнер с карточками (главная) === */
-.container {
+/* ======================
+   HERO SECTION
+====================== */
+.hero {
+    background: url("images/hero.jpg") center/cover no-repeat;
+    height: 350px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 42px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* ======================
+   MAIN CARD GRID
+====================== */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    padding: 40px 20px;
+    padding: 0 20px;
 }
 
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 300px;
+    background: white;
     padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
-    transition: transform 0.3s;
+    transition: .3s;
 }
 
 .card:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px);
 }
 
-.card h3 {
-    color: rgb(0, 77, 102);
-    margin-bottom: 10px;
-}
-
-.img_card {
+.card img {
     width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
+    border-radius: 10px;
 }
 
 .pret_produs {
-    font-size: 18px;
-    color: #e67e22;
     margin-top: 10px;
+    font-size: 20px;
+    color: #e67e22;
 }
 
 .buy_button {
-    background-color: #006680;
-    color: white;
-    border: none;
+    margin-top: 10px;
     padding: 10px 20px;
-    border-radius: 6px;
+    border: none;
+    background: #006680;
+    color: white;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: .3s;
 }
 
 .buy_button:hover {
-    background-color: #0099cc;
+    background: #0099cc;
 }
 
-/* === Контакты / Карта === */
-.map_container {
-    max-width: 100%;
+/* ======================
+   ABOUT SECTION
+====================== */
+.about_section {
+    max-width: 900px;
+    margin: 40px auto;
     padding: 20px;
 }
 
-/* === Форма входа === */
-.login_form {
-    text-align: center;
-    margin: 30px auto;
-    max-width: 400px;
+.about_section h1, 
+.about_section h2, 
+.about_section h3 {
+    color: #004d66;
+    margin-bottom: 10px;
 }
 
-.login_form input[type="text"],
-.login_form input[type="password"] {
+/* ======================
+   VIDEO SECTION
+====================== */
+.video_section {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.video_section video {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ======================
+   CONTACT PAGE
+====================== */
+.contact_container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.login_form input,
+.login_form button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
     border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
 .login_form button {
-    padding: 10px 20px;
-    background-color: #006680;
+    background-color: #004d66;
     color: white;
-    border: none;
-    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .login_form button:hover {
     background-color: #0099cc;
 }
 
-/* === About us (история и видео) === */
-.about_section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.about_section h1 {
-    color: #004d66;
-    margin-bottom: 10px;
-}
-
-.video_section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.video_section video {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* === Footer (если нужно) === */
+/* ======================
+   FOOTER
+====================== */
 footer {
-    background-color: #333;
-    color: white;
+    background: #333;
+    padding: 30px;
     text-align: center;
-    padding: 30px 20px;
+    color: white;
+    margin-top: 50px;
 }
 
 footer a {
     color: #ffd700;
     text-decoration: none;
-    margin: 0 10px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+/* ======================
+   BACK TO TOP BUTTON
+====================== */
+.backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 12px 16px;
+    background: #006680;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease, transform .3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* === Адаптивность === */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    iframe {
-        width: 100%;
-        height: 300px;
-    }
-
-    .login_form {
-        width: 90%;
-    }
+.backToTop.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(-5px);
 }

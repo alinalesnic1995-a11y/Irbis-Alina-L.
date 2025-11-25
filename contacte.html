@@ -2,41 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Contact Irbis Tur locație, adresă, autentificare.">
+    <meta name="keywords" content="contact, Irbis Tur, adresa, locatie">
+    <meta name="author" content="Alina Lesnic">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacte</title>
+    <title>Contacte - Irbis Tur</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="snow-leopard-irbis.jpg">
 </head>
-<body>
-    <nav class="nav_links">
-        <p><a href="index.html">Pagina principală</a></p>
-        <p><a href="aboutus.html">About us</a></p>
-        <p><a href="contacte.html">→ Contacte</a></p>
+<header>
+    <nav class="navbar">
+        <a href="index.html">Acasă</a>
+        <a href="aboutus.html">Despre noi</a>
+        <a href="contact.html">→ Contacte</a>
     </nav>
+</header>
 
-    <h2>Adresa</h2>
+<main>
 
-    <div class="map_container">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6031.248018148952!2d28.74231262342816!3d47.06313006180233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cbd64527783161%3A0xc530d7ddf69115a4!2sVasolTrans%20INSPEC%C8%9AIE%20TEHNIC%C4%82%20PERIODIC%C4%82!5e0!3m2!1sen!2s!4v1756132873029!5m2!1sen!2s" 
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
+    <section class="contact_container">
 
-    <hr>
+        <h2>Locația noastră</h2>
+        <p>Ne găsiți la adresa indicată pe hartă:</p>
 
-    <h2>Autentificare</h2>
+        <div class="map_container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6031.248018148952!2d28.74231262342816!3d47.06313006180233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cbd64527783161%3A0xc530d7ddf69115a4!2sVasolTrans%20INSPEC%C8%9AIE%20TEHNIC%C4%82%20PERIODIC%C4%82!5e0!3m2!1sen!2s!4v1756132873029!5m2!1sen!2s" 
+                width="100%" 
+                height="350" 
+                style="border:0;" 
+                allowfullscreen 
+                loading="lazy">
+            </iframe>
+        </div>
 
-    <form class="login_form" action="#" method="post">
-        <input type="text" placeholder="Login sau email"> 
-        <br><br>
-        <input type="password" placeholder="Password">
-        <br><br>
-        <button type="submit">Autentificare</button>
-    </form>
+        <h2>Autentificare</h2>
+
+        <form class="login_form" action="#" method="post">
+            <input type="text" placeholder="Login sau email">
+            <input type="password" placeholder="Parola">
+            <button type="submit">Autentificare</button>
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Irbis Tur — Toate drepturile rezervate</p>
+    <p>
+        <a href="mailto:alinasavin18@gmail.com">Trimite email</a> |
+        <a href="tel:060174334">Sună-ne</a>
+    </p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
