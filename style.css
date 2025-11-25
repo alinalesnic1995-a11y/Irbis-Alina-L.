@@ -9,9 +9,8 @@
 }
 
 body {
-    background: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    background: linear-gradient(to bottom, #89defb, #f7c3c3);
+    background-attachment: fixed;
 }
 
 /* === Верхняя панель === */
