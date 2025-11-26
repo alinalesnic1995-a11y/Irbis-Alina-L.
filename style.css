@@ -209,3 +209,53 @@ footer a {
     opacity: 1;
     transform: translateY(-5px);
 }
+
+/*adding*/
+/* Calendar */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.month-block {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.month-block h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 8px;
+    background: #e6f7ff;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.day:hover {
+    background: #00aaff;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+/* Country image */
+.country-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
