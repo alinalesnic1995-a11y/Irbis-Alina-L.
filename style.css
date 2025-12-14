@@ -259,3 +259,28 @@ footer a {
     border-radius: 12px;
     margin-bottom: 20px;
 }
+/* ======================
+   RESPONSIVE DESIGN
+====================== */
+
+@media (max-width: 1024px) {
+    .calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .calendar {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+}
